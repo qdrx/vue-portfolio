@@ -31,7 +31,6 @@ export default {
           language: 'Python',
           url: 'https://github.com/username/project-2'
         },
-        // Add more projects as needed
       ]
     };
   }
@@ -40,6 +39,7 @@ export default {
 
 <style scoped>
 .projects-container {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
@@ -49,12 +49,12 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px; /* Опционально: устанавливаем максимальную ширину */
+  max-width: 1200px; 
 }
 
 .project {
-  width: 300px; /* Опционально: задаем ширину проекта */
-  border: 1px solid #e1e4e8;
+  width: 300px;
+  border: 1px solid #ff79c6;
   border-radius: 6px;
   padding: 20px;
   box-sizing: border-box;
@@ -89,7 +89,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .project {
-    width: calc(100% - 40px); /* Опционально: на узких экранах ширина 100% минус отступы */
+    width: calc(100% - 40px);
   }
 }
 </style>

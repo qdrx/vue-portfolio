@@ -1,9 +1,9 @@
 <template>
-  <NavBar/>
+  <NavBar />
   <div class="divider"></div>
-  <Logo/>
-  <Terminal/>
-  <GitHubProjects/>
+  <Logo />
+  <Terminal />
+  <GitHubProjects />
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-@import './assets/styles.scss'; 
+@import './assets/styles.scss';
 
 .divider {
   height: 2px;
