@@ -1,14 +1,13 @@
 /* Глобальные стили */
 body {
     width: auto;
-    font-family: 'Roboto Mono', monospace; /* Используйте моноширинный шрифт */
+    font-family: 'Avenir Next', monospace; /* Используйте моноширинный шрифт */
     margin: 0;
     padding: 0;
     background-color: black; /* Основной фон */
-    color: #f8f8f2; /* Цвет текста */
+    color: #f8f8f2;
   }
   
-  /* Стили для секций */
   .section {
     padding: 50px 20px;
   }
@@ -16,24 +15,22 @@ body {
   .section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #50fa7b; /* Цвет заголовков */
+    color: #50fa7b;
   }
   
   .section p {
     line-height: 1.6;
   }
   
-  /* Стили для ссылок */
   a {
-    color: #bd93f9; /* Цвет ссылок */
+    color: #bd93f9;
     transition: color 0.3s ease;
   }
   
   a:hover {
-    color: #ff79c6; /* Изменение цвета ссылок при наведении */
+    color: #ff79c6;
   }
   
-  /* Стили для кнопок */
   .button {
     padding: 10px 20px;
     background-color: #bd93f9;
@@ -45,7 +42,7 @@ body {
   }
   
   .button:hover {
-    background-color: #ff79c6; /* Изменение цвета кнопок при наведении */
+    background-color: #ff79c6;
     color: #282a36;
   }
   

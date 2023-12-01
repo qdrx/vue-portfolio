@@ -20,16 +20,16 @@ export default {
     return {
       projects: [
         {
-          name: 'Project 1',
-          description: 'Description of Project 1',
-          language: 'JavaScript',
-          url: 'https://github.com/username/project-1'
+          name: 'E-commerse Example',
+          description: 'Written in NestJS with PostgreSQL, Redis, Docker.',
+          language: 'TypeScript',
+          url: 'https://github.com/qdrx/ecom-example'
         },
         {
-          name: 'Project 2',
-          description: 'Description of Project 2',
-          language: 'Python',
-          url: 'https://github.com/username/project-2'
+          name: 'Book AI',
+          description: 'NestJS application with OpenAI and OpenLibrary integration.',
+          language: 'TypeScript',
+          url: 'https://github.com/qdrx/book-ai'
         },
       ]
     };
@@ -39,7 +39,8 @@ export default {
 
 <style scoped>
 .projects-container {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +50,7 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px; 
+  max-width: 1200px;
 }
 
 .project {

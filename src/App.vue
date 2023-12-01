@@ -4,12 +4,14 @@
   <Logo />
   <Terminal />
   <GitHubProjects />
+  <ContactInfo />
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import Terminal from './components/TerminalEmulator.vue';
 import Logo from './components/Logo.vue';
+import ContactInfo from './components/Footer.vue'
 import GitHubProjects from './components/Projects.vue'
 
 export default {
@@ -19,6 +21,7 @@ export default {
     Terminal,
     Logo,
     GitHubProjects,
+    ContactInfo,
   }
 }
 </script>
@@ -29,7 +32,7 @@ export default {
 .divider {
   height: 2px;
   background-color: #ff79c6;
-  margin: 20px auto;
+  margin: 10px auto;
   width: 80%;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <p class="logo">Olevinskyi</p>
+        <p class="logo">IO.</p>
     </div>
   </template>
   

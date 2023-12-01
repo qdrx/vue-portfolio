@@ -70,7 +70,7 @@ export default {
 }
 
 .terminal {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Avenir Next', monospace;
   background-color: #282a36;
   color: #f8f8f2;
   border-radius: 5px;
