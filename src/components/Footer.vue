@@ -8,6 +8,13 @@
           </span>
           <a href="https://t.me/qqdrx" target="_blank">@qqdrx</a>
         </div>
+        <div class="github">
+          <span>
+            <i class="fab fa-github"></i>
+            GitHub:
+          </span>
+          <a href="https://github.com/qdrx" target="_blank">qdrx</a>
+        </div>
       </div>
     </div>
   </template>
