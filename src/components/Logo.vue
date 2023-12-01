@@ -13,7 +13,7 @@
   <style scoped>
   .wrapper {
     display: flex;
-    margin-right: 25px;
+    margin-right: 15px;
     align-items: center;
     justify-content: center;
   }
