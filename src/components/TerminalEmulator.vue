@@ -46,26 +46,20 @@
             setTimeout(() => {
               this.currentIndex++;
               this.currentText = '';
-              this.showText = true;
-              this.toggleCursor();
               if (this.currentIndex < this.text.length) {
                 setTimeout(() => {
-                  this.showText = true;
+                  this.showCursor = true;
                   this.animateText();
-                }, 500);
+                }, 1000);
               }
             }, 1000);
           }
         }, 50);
-      },
-      toggleCursor() {
-        setInterval(() => {
-          this.showCursor = !this.showCursor;
-        }, 500);
       }
     }
   };
   </script>
+  
   
   <style scoped>
   .qdrx {
@@ -74,16 +68,24 @@
   text-align: center;
   }
   .terminal {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #282a36;
-    color: #f8f8f2;
-    border-radius: 5px;
-    width: 600px;
-    max-width: 100%;
-    margin: 20px auto;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto Mono', monospace;
+  background-color: #282a36;
+  color: #f8f8f2;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 800px;
+  margin: 20px auto;
+  height: 250px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    width: 95%;
+    font-size: 0.8em;
   }
+}
   
   .terminal-header {
     color: #f8f8f2;
@@ -126,7 +128,7 @@
   }
   .typed-text::after {
     color: #ff79c6;
-    content: '❚'; /* Курсор */
+    content: '❚'; 
     animation: blink 1s step-end infinite;
   }
 

@@ -1,18 +1,24 @@
 <template>
   <NavBar/>
   <div class="divider"></div>
+  <Logo/>
   <Terminal/>
+  <GitHubProjects/>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import Terminal from './components/TerminalEmulator.vue';
+import Logo from './components/Logo.vue';
+import GitHubProjects from './components/Projects.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    Terminal
+    Terminal,
+    Logo,
+    GitHubProjects,
   }
 }
 </script>
