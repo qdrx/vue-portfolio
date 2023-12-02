@@ -1,7 +1,7 @@
 # frontend-portfolio
 
 ## Available at:
-https://main--ubiquitous-unicorn-a0e36e.netlify.app/
+https://qdrx.netlify.app/
 
 ## Project setup
 ```
