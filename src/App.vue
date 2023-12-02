@@ -22,7 +22,10 @@ export default {
     Logo,
     GitHubProjects,
     ContactInfo,
-  }
+  },
+  mounted() {
+    document.title = "qdrx";
+  },
 }
 </script>
 
