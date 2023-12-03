@@ -1,25 +1,11 @@
 /* Глобальные стили */
 body {
     width: auto;
-    font-family: 'Avenir Next', monospace; /* Используйте моноширинный шрифт */
+    font-family: 'Avenir Next', monospace;
     margin: 0;
     padding: 0;
-    background-color: black; /* Основной фон */
+    background-color: black;
     color: #f8f8f2;
-  }
-  
-  .section {
-    padding: 50px 20px;
-  }
-  
-  .section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #50fa7b;
-  }
-  
-  .section p {
-    line-height: 1.6;
   }
   
   a {
@@ -29,20 +15,5 @@ body {
   
   a:hover {
     color: #ff79c6;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #bd93f9;
-    border: none;
-    color: #282a36;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #ff79c6;
-    color: #282a36;
   }
   
