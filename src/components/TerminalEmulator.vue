@@ -11,10 +11,16 @@
     </div>
     <div class="terminal-body">
       <div class="terminal-content">
-        <p v-if="showText" class="typed-text" v-html="displayText"></p>
-        <span v-if="showCursor" class="cursor"></span>
+        <p v-if="showText" class="typed-text" :class="{ 'hide-cursor': !showCursor }" v-html="displayText"></p>
+        <div class="terminal-input-wrapper">
+          <div class="input-container">
+            <input v-model="command" @keydown.enter="onCommandInput" :size="command.length || 15" class="terminal-input" type="text" placeholder="Enter commands">
+          </div>
+          <span v-if="showCursor" class="cursor">❚</span>
+        </div>
       </div>
     </div>
+
   </div>
 </template>
   
@@ -30,32 +36,41 @@ export default {
       displayText: '',
       currentIndex: 0,
       showText: true,
-      showCursor: true
+      showCursor: false,
+      command: '',
     };
   },
   mounted() {
     this.animateText();
   },
   methods: {
-    animateText() {
-      const typeInterval = setInterval(() => {
-        this.currentText += this.text[this.currentIndex][this.currentText.length];
+    typeCharacter(char) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(char);
+        }, 10);
+      });
+    },
+    async animateText() {
+      for (const char of this.text[this.currentIndex]) {
+        const nextChar = await this.typeCharacter(char);
+        this.currentText += nextChar;
         this.displayText = this.currentText;
-        if (this.currentText === this.text[this.currentIndex]) {
-          clearInterval(typeInterval);
-          setTimeout(() => {
-            this.currentIndex++;
-            this.currentText = '';
-            if (this.currentIndex < this.text.length) {
-              setTimeout(() => {
-                this.showCursor = true;
-                this.animateText();
-              }, 1000);
-            }
-          }, 1000);
-        }
-      }, 50);
-    }
+      }
+      this.showCursor = true;
+    },
+    onCommandInput(event) {
+      this.command = event.target.value;
+      this.processCommand();
+    },
+    processCommand() {
+      if (this.command === 'echo') {
+        this.displayText = 'Echo command received!';
+      } else {
+        this.displayText = 'Unknown command: ' + this.command;
+      }
+      this.command = '';
+    },
   }
 };
 </script>
@@ -129,11 +144,41 @@ export default {
   line-height: 1.6;
 }
 
-.typed-text::after {
+.typed-text.hide-cursor::after {
   color: #ff79c6;
   content: '❚';
   animation: blink 1s step-end infinite;
 }
+
+.terminal-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.terminal-input {
+  font-family: 'Avenir Next', monospace;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  caret-color: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.terminal-input::after {
+  color: #ff79c6;
+  content: '❚';
+  animation: blink 1s step-end infinite;
+}
+
+.cursor {
+  display: flex;
+  color: #ff79c6;
+  animation: blink 1s step-end infinite;
+}
+
 
 @keyframes blink {
   50% {
